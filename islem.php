@@ -13,6 +13,20 @@ if (isset($_POST['giris'])){
                           setcookie("sifre","123",strtotime("+1 day"));
 
                         }
+                        else{
+
+                          setcookie("kullaniciAdi","admin",strtotime("-1 day"));
+                          setcookie("sifre","123",strtotime("-1 day"));
+
+                        }
+                        header("Location:index.php?authentication=approved");
+                        exit;
+                    }
+                    else{
+
+                      header("Location:index.php?authentication=reject");
+                      exit;
+
                     }
 
 

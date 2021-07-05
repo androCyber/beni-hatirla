@@ -15,7 +15,13 @@
 <body>
     <div class="container">
 <h1>Beni Hatırla Uygulaması</h1>
-<hr>
+<hr><?php
+            if ($_GET['authentication']=="reject"){
+
+    ?>
+        <div class="alert alert-danger">Giriş İşlemi Başarısız.</div>
+
+        <?php } ?>
         <form action="islem.php" method="POST">
             <div class="form-group">
                 <label class="form-label">Kullanıcı Adı</label>
