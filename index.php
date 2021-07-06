@@ -32,12 +32,29 @@
         <form action="islem.php" method="POST">
             <div class="form-group">
                 <label class="form-label">Kullanıcı Adı</label>
-                <input type="text" class="form-control" name="kullaniciAdi" placeholder="Kullanıcı Adını Giriniz...">
+                <input type="text" class="form-control" name="kullaniciAdi"
+                <?php if (isset($_COOKIE['kullaniciAdi'])){?>
+                        value="<?php echo $_COOKIE['kullaniciAdi']; ?>"
+                    
+                    <?php } else {?>
+                        placeholder="Kullanıcı Adını Giriniz..."
+                <?php } ?>
+                 >
                 <div id="emailHelp" class="form-text">Bilgileriniz kimse ile paylaşılmamaktadır.</div>
             </div>
             <div class="form-group">
                 <label class="form-label">Şifre</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" name="sifre" placeholder="Şifrenizi Giriniz...">
+                <input type="password" class="form-control" id="exampleInputPassword1" name="sifre" 
+                <?php if (isset($_COOKIE['kullaniciAdi'])){?>
+                        value="<?php echo $_COOKIE['sifre']; ?>"
+                    
+                    <?php } else {?>       
+                                    placeholder="Şifrenizi Giriniz..."
+                <?php } ?>
+                 >
+                
+                
+                
             </div>
             <div class="form-group form-check">
                 <input type="checkbox" class="form-check-input" name="beniHatirla" id="exampleCheck1">
