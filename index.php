@@ -21,7 +21,14 @@
     ?>
         <div class="alert alert-danger">Giriş İşlemi Başarısız.</div>
 
-        <?php } ?>
+        <?php } else if($_GET['authentication']=="logout"){?>
+
+            <div class="alert alert-success">Başarı ile Çıkış yaptınız.</div>
+
+            <?php }?>
+        
+        
+      
         <form action="islem.php" method="POST">
             <div class="form-group">
                 <label class="form-label">Kullanıcı Adı</label>
