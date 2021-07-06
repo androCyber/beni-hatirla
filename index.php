@@ -57,7 +57,7 @@
                 
             </div>
             <div class="form-group form-check">
-                <input type="checkbox" class="form-check-input" name="beniHatirla" id="exampleCheck1">
+                <input type="checkbox" class="form-check-input" <?php echo isset($_COOKIE['kullaniciAdi']) ? "checked" : ""; ?> name="beniHatirla" id="exampleCheck1">
                 <label class="form-check-label " for="exampleCheck1">Beni Hatırla</label>
             </div>
             <div class="bg-light clearfix">
